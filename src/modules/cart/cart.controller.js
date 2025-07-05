@@ -21,6 +21,9 @@ app.get('/api/v1/cart', (req, res) => {
   });
 });
 
+res.status(500).json({ message: 'Internal Server Error' });
+
+
 // Add item to cart
 app.post('/api/v1/cart/items', (req, res) => {
   const { productId, quantity = 1 } = req.body;
